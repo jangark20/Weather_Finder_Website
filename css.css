@@ -1,0 +1,60 @@
+head{
+	margin-top: 0;
+}
+body{
+	margin: 0;
+}
+.title{
+	height: 70px;
+	background-color:#0519f2;
+	font-size: 30px;
+	color:white;
+	text-align: center;
+	margin: 0;
+	padding-top: 20px;
+	width:100%;
+	font-family: : "Helvetica";
+	position: fixed;
+	top:0;
+	z-index: 100;
+}
+.container{
+	height: 600px;
+	background-image: url("weather.jpg");
+	position: relative;
+	top:70px;
+	width: 100%;
+	
+	align-items: center;
+
+}	
+.city{
+	margin:40px auto auto 45% ;
+	padding: 10px;
+	width:200px;
+
+}
+.button{
+	padding: 10px;
+}
+.temperature{
+	text-align: center;
+	padding-top:10%;
+	margin-top: 20px;
+	font-weight: 100;
+	font-size:50px;
+	position: relative;
+	top:0;
+}
+.foot{
+	height: 80px;
+	background:#0519f2;
+	z-index: 100;
+	color:white;
+	text-align: center;
+	position: relative;
+	top:50px; 
+}
+.text{
+	padding-top: 20px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css.css">
+	<meta name="viewport" content="width=device-width,initial-scale:1.0">
+</head>
+
+<body>
+	<div class="title">Weather Finder</div>
+	<div class="container">
+	<p id="temp" class="temperature"></p>
+	<input id="city" class="city" placeholder="enter city-name">
+	<button onclick="show_temp()" class="button">Submit</button>
+	<script type="text/javascript">
+	function show_temp(){
+	document.getElementById("temp").style.color="red";
+	document.getElementById("temp").style.fontSize="60px";
+	document.getElementById("temp").style.fontFamily="Helvetica";
+	document.getElementById("temp").style.fontWeight=100;
+	city=document.getElementById("city").value;
+	url="https://api.weatherbit.io/v2.0/current?city="+city+"&key=f6e5274cc0554f09b0a37ed742f7ea19";
+	httpRequest=new XMLHttpRequest();
+	httpRequest.open("GET",url);
+	httpRequest.send();
+	httpRequest.onreadystatechange=function(){
+	if(this.readyState==4 && this.status==200){
+	user_data=JSON.parse(this.responseText);
+	document.getElementById("temp").innerHTML=user_data.data[0].temp+" °C";
+}
+}
+}
+</script>
+
+
+</body>
+</div>
+<div class="foot"><p class="text"> © copyrights @ rakesh_kumar_iitk</p></div>
+</html>
